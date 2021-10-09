@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to first lab</title>
+        <link rel="stylesheet" href="css/play.css">
+        <script type="module" src="pages/play.js"></script>
+        <script src="frontend/tableRecords.js"  defer></script>
+
+    </head>
+
+
+    <body>
+    <div style="position: absolute;">
+        <div id="table" >
+            <p>Table records!</p>
+        </div>
+    </div>
+    <div id="coll">
+        <div style="display: flex;justify-content: space-between;">
+        <div style="width: fit-content;">
+            <p id="nameUsers"></p>
+            <p id="score"></p>
+            <p id="bestScore"></p>
+            <button id="aut">Back to login</button>
+        </div>
+        <div style="display: grid;justify-content: end;">
+            <canvas id="nextFig" width="128" height="128"></canvas>
+        </div>
+        </div>
+        <button id="mute">Mute music</button>
+        <button id="restart">Restart</button>
+
+        <canvas width="320" height="640" id="screen"></canvas>
+    </div>
+
+
+
+    </body>
+
+</html>

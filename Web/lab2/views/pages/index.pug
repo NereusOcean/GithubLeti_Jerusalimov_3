@@ -1,0 +1,78 @@
+doctype html
+
+head
+    meta(charset='utf-8')
+    title Вторая лаб. работа
+    script(src="main.js")
+    link(href='index.css' rel='stylesheet')
+
+body(style="background: linear-gradient(181deg, #345d67, #2298de); height:100%;background-repeat: no-repeat;background-attachment: fixed;")
+    .app
+        .top
+            .header
+                .padding
+                    table(style='width:100%', border='1', class="tableLib" id="tableLib")
+                        tr
+                            th Токен
+                            th(class="link" onclick='sort(this)' id='name') Книга
+                            th(class="link" onclick='sort(this)' id='autor') Автор
+                            th(class="link" onclick='sort(this)' id='availability') Наличие
+                            th(class="link" onclick='sort(this)' id='date') Дата издания
+
+                .padding
+
+                    button(class="buttonOnMainPage" onclick="book_addition_form()") Добавить книгу
+                    button(class="buttonOnMainPage" onclick="refreshFilters()" style="margin-left: 10px") Очистить фильтры
+                    div(style="display:flex;float:right")
+                        input(class="inputMainPage" id="tokenToRemove" placeholder="Токен")
+                        button(class="buttonOnMainPage" onclick="removeBook()") Удалить книгу
+
+                    dialog(id="dialogFormToAddBook")
+                            div(class="book_addition_form")
+                                p Данные новой книги
+                                div(style="display: flex")
+                                    div(style="display: grid")
+                                        input(class="inputAdd" id="name_book" placeholder="Наименование книги")
+                                        input(class="inputAdd" id="autor_book" placeholder="Автор")
+                                        input(class="inputAdd" id="date_of_issue" type="date")
+                                    div(style="display: grid")
+                                        p(class="necessary") *
+                                        p(class="necessary") *
+                                        p(class="necessary") *
+                                input(class="inputAdd" id="image_book" placeholder="url фото книги")
+                                button(class="successButton" onclick="addBook()") Подтвердить
+                                button(class="closeButton" onclick="close_dialog(\"dialogFormToAddBook\")") Выйти
+                    dialog(id="bookPage" style="width:60vw")
+                            div(class="bookPage" style="display: grid")
+                                div(style="display:flex;justify-content: space-between;")
+                                    div(id="popUp" hidden="true") Вы не взяли книгу!
+                                    div(style="display:grid")
+                                        img(id="imageBook" style="width:220px;height:350px" src="")
+                                        p(id="InStock")
+                                    div
+                                        h1(class="padding" id="nameBook")
+                                        p(class="padding" id="description")
+                                        div(class="padding" )
+                                            div( style="display: grid")
+                                                text( id="countPage")
+                                                text( id="bookmark")
+                                            div( style="display:grid; padding-top: 15px")
+                                                text(id="debtor")
+                                                text(id="dateToTookTxt")
+                                                text(id="dateToReturn")
+                                        div(id="settings" hidden ="true")
+                                            div(style="display:grid")
+                                                textarea(id="setDescription" placeholder="Изменить описание")
+                                                input(id="setImage" placeholder="Изменить URL картинки" )
+                                                input(id="setCountPage" placeholder="Количество страниц в книге")
+                                                input(id="setBookmark" placeholder="Закладка")
+                                        div(id="takeBookForm" hidden="true")
+                                            div(style="display:grid")
+                                                input(id="debtorName" placeholder="Ваше имя")
+                                                input(id="dateToTook" type="date")
+                                    img(class="settingsBook" src="data:image/png;base64,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"
+                                        onclick="settingsBook(this)")
+                                div(class="padding")
+                                    button(class="successButton" onclick="takeBook()") Взять книгу
+                                    button(class="successButton" onclick="returnBook()") Вернуть книгу
+                                    button(class="closeButton" onclick="close_dialog(\"bookPage\")") Выйти

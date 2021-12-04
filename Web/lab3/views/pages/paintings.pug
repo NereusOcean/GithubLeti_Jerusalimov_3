@@ -1,0 +1,46 @@
+doctype html
+
+head
+    include ../head
+    script(type="module" src="src/paintingPage.js")
+    link(href='style/pages.css' rel='stylesheet')
+
+body
+    button(id="addPainting" style="padding: 8px 32px") Добавить картину на аукцион
+    dialog(id="dialogFormToAddPainting")
+        div(style="display:grid")
+            p Данные новой картины
+            grid
+                flex
+                    grid
+                        input(id="name_pic" placeholder="Наименование картины")
+                        input(id="author_pic" placeholder="Автор")
+                        input(id="cost" placeholder="Начальная стоимость")
+                        input(id="image_pic" placeholder="url фото картины")
+                    grid
+                        p(class="necessary") *
+                        p(class="necessary") *
+                        p(class="necessary") *
+                        p(class="necessary") *
+                button(class="successButton" id="addPaintingButton") Подтвердить
+                button(class="closeButton" id="closeAddingPainting") Выйти
+
+    dialog(id="dialogFormToEditPaintings")
+        div(style="display:grid")
+            p Настройки
+            grid
+                flex
+                    grid
+                        input(id="ids" style="display: none")
+                        input(id="namePic" placeholder="Наименование картины")
+                        input(id="authorPic" placeholder="Автор")
+                        input(id="costPic" placeholder="Начальная стоимость")
+                        input(id="imagePic" placeholder="url фото картины")
+                        input(id="minPriceStep" placeholder="Минимальный шаг аукциона")
+                        input(id="maxPriceStep" placeholder="Максимальный шаг аукциона")
+                button(class="successButton" id="updatePainting") Подтвердить
+                button(class="closeButton" id="closeSettingsPainting") Выйти
+
+    .padding(id="contentPainting")
+
+

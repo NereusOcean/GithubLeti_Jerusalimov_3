@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    display: grid;
+    justify-content: center;
+}
+
+#canvasUser{
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    left: 0; right: 0;
+
+}
+#canvasEnemy{
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    left: 0; right: 0;
+
+}
+
+flex{
+    display: flex;
+}
+
+grid{
+    display: grid;
+}
+
+box{
+    display: grid;
+    position: absolute;
+    margin: 10px;
+    padding: 7px;
+    z-index: 6;
+}
+
+#settings{
+    z-index: 7;
+}
+
+
+text{
+    font-size: 22px;
+    font-family: Dialog;
+}

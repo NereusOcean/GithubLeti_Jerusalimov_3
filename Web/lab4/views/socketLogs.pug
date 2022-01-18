@@ -1,0 +1,10 @@
+grid
+    p#current_time До конца аукциона:
+    p#local_time
+    text(style="text-align: center;") Чат
+    chat#chat(style="width: 80%;height:200px;overflow:auto;margin-left:auto;margin-right:auto;padding: 7px 14px;")
+        text#message
+
+    flex
+        input(id="bet" placeholder="Ставка")
+        button(id="setMoney") Поставить

@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        include ../head
+        script(src="/socket.io/socket.io.js")
+        script(type="module" src="src/socket/sockets.js")
+        block script
+
+
+    body#content
+        block content
+
+

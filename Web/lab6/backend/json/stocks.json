@@ -1,0 +1,29 @@
+[
+  {
+    "id":0,
+    "name":"Amazon",
+    "distribution":"нормальный",
+    "max":20,
+    "price":200,
+    "st_price":210,
+    "in_torg": 100
+  },
+  {
+    "id":1,
+    "name":"Apple",
+    "distribution":"равномерный",
+    "max":200,
+    "price":2010,
+    "st_price":2000,
+    "in_torg": 10
+  },
+  {
+    "id": 2,
+    "name":"ЛЭТИ",
+    "distribution": "нормальный",
+    "max": 80,
+    "price": 150,
+    "st_price": 120,
+    "in_torg": 30
+  }
+]

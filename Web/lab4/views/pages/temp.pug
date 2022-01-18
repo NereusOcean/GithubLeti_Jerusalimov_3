@@ -1,0 +1,35 @@
+.app
+    .top
+        .header
+            .padding
+                dialog(id="dialogFormToAddPainting")
+                    div(style="display:grid")
+                        p Данные новой картины
+                        div(style="display: flex")
+                            div(style="display: grid")
+                                input(class="inputAdd" id="name_book" placeholder="Наименование картины")
+                                input(class="inputAdd" id="autor_book" placeholder="Автор")
+                                input(class="inputAdd" id="date_of_issue" type="date")
+                                input(class="inputAdd" id="image_book" placeholder="url фото картины")
+                            div(style="display: grid")
+                                p(class="necessary") *
+                                p(class="necessary") *
+                                p(class="necessary") *
+                                p(class="necessary") *
+
+                        button(class="successButton" id="addPaintingButton") Подтвердить
+                        button(class="closeButton" id="closeAddingPainting") Выйти
+
+                .grid(id="gridPainting" style="display:flex; flex-wrap: wrap;")
+
+
+        template(id="template")
+            .padding
+                .boxWithPainting()
+                    .image
+                    .textState dfvdfv
+                    div(class="showDescription")
+                        .namePainting dfvdfv
+                        .description dfvdfv
+                        .year dfvdf
+                    button(class="settings")

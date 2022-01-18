@@ -1,0 +1,33 @@
+
+#change_button{
+    width: 20px;
+    height: 20px;
+}
+
+
+.count{
+    background-color: transparent;
+    border-bottom: 2px;
+    width: 80px;
+}
+
+#sell0{
+    color: red;
+}
+
+button{
+    margin: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.torgs{
+    text-align: left;
+}
+input{
+    margin: 6px;
+}
+th{
+
+    background: rgba(101,171,177, .5);
+}

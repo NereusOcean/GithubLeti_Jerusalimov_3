@@ -1,0 +1,18 @@
+doctype html
+
+head
+    include ../jquery
+    link(href='style/aut.css' rel='stylesheet')
+    script(src="/socket.io/socket.io.js")
+
+body
+    p Welcome to #{title}
+    form(action='/in' method='POST')
+        .content
+            .userNameInputstyle
+                input#userNameInput(type='text' name="name" required)
+                span.bar
+                label Name
+            p
+                button#submitButton(type='submit' ) Subbmit
+

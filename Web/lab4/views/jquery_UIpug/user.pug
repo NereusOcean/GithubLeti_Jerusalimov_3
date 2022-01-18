@@ -1,0 +1,20 @@
+extends ../pages/mainPage
+block script
+    script(src="src/jquery-UI/user.js")
+    script(type="module" src="src/participants.js")
+    script(type="module" src="src/paintingPage.js")
+    link(href='style/pages.css' rel='stylesheet')
+
+block content
+    div#adminInfo(style="overflow-y:auto;right: 0")
+        div(style="text-align: center") #{title}
+        include ../socketLogs
+    div#users(style="overflow:scroll")
+        div(style="text-align: center") Участники
+        .padding(id="contentParticipants")
+
+    div#paint(style="overflow:scroll;font-size:8pt")
+        .padding(id="contentPainting")
+
+
+

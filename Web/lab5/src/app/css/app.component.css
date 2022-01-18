@@ -1,0 +1,38 @@
+h2{
+  text-align: center;
+  position: relative;
+  display: flex;
+  margin-top: 0;
+  top: 0;
+  border-radius: 20px;
+  background: rgba(133, 86, 187, 0.74);
+}
+
+li{
+  list-style:none;
+}
+li:hover{
+  background: #9129e6;
+  cursor: pointer;
+  border-radius: 20px;
+}
+li a{
+  color:#222;
+  padding:5px 7px;
+  text-decoration:none;
+  display:block;
+  font-size: 1em;
+}
+
+ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu{
+  float:left;
+  position: relative;
+  width:100%;
+  text-align: center;
+}
+

@@ -1,0 +1,37 @@
+doctype html
+
+head
+    include ../head
+    script(type="module" src="src/participants.js")
+    link(href='style/pages.css' rel='stylesheet')
+
+body
+    button(id="addParticipants" style="padding: 8px 32px") Добавить участника
+    dialog(id="dialogFormToAddParticipants")
+        div(style="display:grid")
+            p Данные новой картины
+            grid
+                flex
+                    grid
+                        input(id="name" placeholder="Имя")
+                        input(id="budget" placeholder="Бюджет")
+                    grid
+                        p(class="necessary") *
+                        p(class="necessary") *
+                button(class="successButton" id="addParticipantsButton") Подтвердить
+                button(class="closeButton" id="closeAddingParticipants") Выйти
+
+    dialog(id="dialogFormToEditParticipants")
+        div(style="display:grid")
+            p Настройки
+            grid
+                flex
+                    grid
+                        input(id="ids" style="display: none")
+                        input(id="newName" placeholder="Имя")
+                        input(id="newBudget" placeholder="Бюджет")
+                button(class="successButton" id="updateParticipants") Подтвердить
+                button(class="closeButton" id="closeSettingsParticipants") Выйти
+
+
+    .padding(id="contentParticipants")

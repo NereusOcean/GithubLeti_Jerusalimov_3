@@ -1,0 +1,16 @@
+.padding
+    .boxPainting(style="width:100%")
+        grid
+            flex
+                grid(style="align-items: center")
+                    text Дата начала аукциона:
+                    text Время начала аукциона:
+                    text Время до окончания торга по картине:
+                    text Пауза для изучения информации по картине:
+                grid
+                    input(id="startDate" placeholder="Дата начала аукциона:" type="date")
+                    input(id="startTime" placeholder="Время начала аукциона:" type="time")
+                    input(id="intervalSell" placeholder="Время до окончания торга по картине:" type="time")
+                    input( id="pauseInterval" placeholder="Пауза для изучения информации по картине:" type="time")
+
+            button(class="successButton" id="updateSettings") Сохранить

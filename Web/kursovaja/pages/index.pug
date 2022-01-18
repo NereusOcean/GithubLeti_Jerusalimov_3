@@ -1,0 +1,21 @@
+head
+    meta(charset='UTF-8')
+    title Title
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js ')
+    link(href='css/index.css' rel='stylesheet')
+body#window
+    flex
+        box
+            text#level
+            text#userName
+            text#coin
+            text#die
+        
+        
+
+        div
+            canvas#canvasUser(style='border: 1px solid red;')
+            canvas#canvasEnemy(style='border: 1px solid green;')
+            canvas#canvas(style='border: 1px solid blue')
+       
+    script(type='module' src='src/index.js')

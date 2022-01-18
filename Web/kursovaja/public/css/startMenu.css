@@ -1,0 +1,51 @@
+body{
+    font-size: 36px;
+    font-family: "Cantarell Extra Bold";
+}
+
+flexCenter{
+    display: flex;
+    justify-content: center;
+
+}
+
+gridCenter{
+    display: grid;
+    justify-content: center;
+
+}
+#name{
+    font-size: 36px;
+    font-family: "Cantarell Extra Bold";
+}
+
+box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 450px;
+    border: 1px solid cornflowerblue;
+    border-radius: 12px;
+    background: linear-gradient(70deg, cornflowerblue, pink);
+
+}
+flex{
+    display: flex;
+}
+button{
+    font-size: 26px;
+    font-family: "Cantarell Extra Bold";
+    margin: 10px;
+    background: rgba(246, 243, 243, 0.3);
+    border-radius: 6px;
+    padding: 7px 60px;
+}
+input{
+    margin: 10px;
+}
+
+img{
+    width: 64px;
+    height: auto;
+}

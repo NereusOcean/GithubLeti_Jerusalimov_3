@@ -1,0 +1,19 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    title Title
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js ')
+    link(rel='stylesheet' href='css/startMenu.css')
+    script(type='module' src='src/pagesJS/startMenu.js')
+body
+    audio#music(src='json/music/menu.mp3' autoplay loop)
+    flexCenter
+        p#name Welcome !
+    gridCenter
+        box
+            gridCenter
+                button#play Играть
+                button#settings Настройки
+                flexCenter
+                    img(src="json/image/sound.png")
+                    input#volume(type="range" min='0' max='1' step='0.1'  value='1')

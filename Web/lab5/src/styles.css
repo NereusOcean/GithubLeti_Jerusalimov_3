@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+#box{
+    display: grid;
+    justify-content: center;
+    background-color: rgb(231, 231, 231);
+    border-radius: 20px;
+    padding: 17px 22px;
+    margin-bottom: 6px;
+}
+
+#flex{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button{
+    margin-right: 12px;
+    font-size: 14px;
+    padding: 7px 10px;
+    border-radius: 14px;
+}
